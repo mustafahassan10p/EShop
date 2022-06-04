@@ -1,0 +1,44 @@
+﻿@page "{id:int}"
+@model EShopRazorPage.Pages.Category.EditModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+}
+<form method="post">
+    <input type="hidden" asp-for="category.Id" />
+    <table>
+        @*<tr>
+                <td>
+                    <label asp-for="category.Id">Id:</label>
+                </td>
+                <td>
+
+                </td>
+            </tr>*@
+        <tr>
+            <td>
+                <label asp-for="category.CategoryName">Category Name:</label>
+            </td>
+            <td>
+                <input asp-for="category.CategoryName" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="category.MaxNumberOfProducts">Max Products:</label>
+            </td>
+            <td>
+                <input asp-for="category.MaxNumberOfProducts" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="category.DisplayOrder">Display Order:</label>
+            </td>
+            <td>
+                <input asp-for="category.DisplayOrder" />
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Save" />
+    <a asp-page="./Index">Back to Category List</a>
+</form>
